@@ -1,2 +1,2 @@
-# linkingwallets
-Linking Wallets and DeanonymizingTransactions in the Ripple Network 
+# Listening Whispers of Ripple
+Linking Wallets and Deanonymizing Transactions in the Ripple Network 
