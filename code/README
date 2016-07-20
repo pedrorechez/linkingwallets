@@ -1,0 +1,46 @@
+ Author: Pedro Moreno-Sanchez
+ Email: pmorenos@purdue.edu
+ Paper: Listening to Whispers of Ripple: Linking Wallets and Deanonymizing Transactions in the Ripple Network
+ Website: http://crypsys.mmci.uni-saarland.de/projects/LinkingWallets
+
+
+
+Instructions to download Ripple data and perform our heuristics:
+
+
+Instructions to download Ripple data
+——————————————————
+We provide the following scripts:
+	* Ripple wallets (accounts): get_accounts_history_server.py
+	* Ripple transactions: get_transactions_history_server.py
+	* Ripple trust lines: get_trust_lines_history_server.py
+
+Instructions to run the Heuristic1
+------------------------------------------
+
+1. Get the list of all Ripple accounts that have transacted with the 
+DividendRippler account: rfYv1TXnwgDDK4WQNbFALykYuEBnrR4pDX. Store them 
+in a file called accounts-attack.txt
+
+2. Create a folder called account-pages and run the script script-get-account-pages.sh.
+This would get the information about the account's info page for all the accounts
+
+3. Create a folder called tx-per-account. 
+Run the script script-get-tx-list.sh to get the list of all transactions done by every 
+account. This scripts use the perl parser parser-dvdrippler-account.pl
+
+4. Create a folder called tx-raw-info. 
+Run the script script-get-specific-tx-info.sh to get the information about specific transactions
+for all the considered currencies
+
+5. Run the script script-get-issue-tx-linking.sh to link the accounts taking into 
+account issuing transactions for the 4 currencies: btc, ltc, trc, nmc
+
+
+5. Run the script script-get-redeem-tx-linking.sh to link the accounts taking into 
+account issuing transactions for the 4 currencies: btc, ltc, trc, nmc
+
+
+Instructions to run the Heuristic2
+----------------------------------------------
+See python-scrypt.py
